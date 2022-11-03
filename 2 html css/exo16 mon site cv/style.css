@@ -1,0 +1,295 @@
+:root {
+    --myGreenColor: rgba(27, 182, 87, 0.5);
+    --myLightBlueColor: rgba(27, 112, 182, 0.8);
+    --myDarkBlueColor: rgba(27, 63, 182, 0.8);
+    --myLightColor: #f3f3f3;
+    --myDarkColor: rgb(43, 43, 43);
+    --myBorderColor: rgb(161, 161, 161);
+    --myBorderRadius: 20px;
+    --bleu1: #1F69FF ;
+    --bleu2: #0A5CFF ;
+    --bleu3: #0052F5 ;
+    --bleu4: #004BE0 ;
+    --bleu5: #0044CC ;
+    --bleu6: #003DB8 ;
+    --bleu7: #0036A3 ;
+    --bleu8: #00308F ;
+
+
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    /* padding: 20px; */
+    background-color: var(--myDarkColor);
+    color: var(--myLightColor);
+}
+
+nav {
+    height: 30px;
+    padding: 5px;
+}
+
+main {
+    padding: 50px;
+    color: var(--myDarkColor);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.urgenceParagraphe {
+    margin-top: 50px;
+}
+
+a:hover {
+    opacity: 0.5;
+    font-size: x-large;
+}
+
+ul {
+    margin: 0;
+    /* padding: 20px; */
+    list-style: none;
+    font-size: large;
+}
+
+li {
+    display: inline-block;
+    padding-right: 10px;
+    /* margin: 10px; */
+}
+
+.activeLink {
+    pointer-events: none;
+    color: var(--myLightBlueColor);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: larger;
+}
+
+h1 {
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin: 0;
+}
+
+footer {
+    font-family: 'Fuzzy Bubbles', cursive;
+    background-color: var(--myDarkColor);
+    color: var(--myLightColor);
+    padding: 10px;
+}
+
+.container {
+    background: white;
+    width: 50%;
+    margin: auto;
+    border-radius: var(--myBorderRadius);
+    padding: 0;
+    overflow: hidden;
+    /* border: 2px solid var(--myBorderColor); */
+    /* background: linear-gradient( var(--myGreenColor), white) ; */
+    box-shadow: 0 0 15px 15px rgba(196, 196, 196, 0.5);
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    padding: 10px;
+    background-image: url(./img/cardBg.jpg);
+}
+
+.cardImg img {
+    border-radius: var(--myBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--myBorderColor);
+}
+
+.cardFirstContent{
+    width: 70%;
+    color: white;
+}
+
+.cardTitle h2 {
+    font-size: x-large;
+}
+
+.cardTitle h3 {
+    font-style: italic;
+    font-size: smaller;
+}
+
+.ligne {
+    display: flex;
+    margin: 10px;
+}
+
+*[class^="colonne"]{
+    width: 50%;
+    padding: 10px;
+}
+
+.colonneg{
+    text-align: left;
+}
+
+.colonned{
+display: flex;
+}
+
+
+/* .colonneg {
+    border-right: 1px solid black;
+} */
+
+.monFormulaireContact{
+    display: inline-block;
+    width: 35%;
+    padding: 10px;
+    border-radius: var(--myBorderRadius);
+    background: linear-gradient(var(--myDarkBlueColor), var(--myLightBlueColor));
+    color: white;
+    box-shadow: 0 0 15px 15px rgba(196, 196, 196, 0.5);
+}
+
+form {
+    border: 0px;
+}
+
+
+.myTextArea{
+    resize: none;
+}
+
+input {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+/* .radioLabel {
+    padding: 0;
+    margin: 0;
+}
+
+.radioInput {
+    padding: 0;
+    margin: 0;
+} */
+
+.btndiv {
+    text-align: right;
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+}
+
+.btn {
+    height: 30px;
+    width: 100px;
+    font-size: large;
+    border-radius: var(--myBorderRadius);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px gray solid;
+}
+
+table {
+    margin: auto;
+    border: var(--myDarkColor) solid 2px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    border-radius: var(--myBorderRadius);
+}
+
+th,
+td {
+    border: var(--myDarkColor) 1px solid;
+}
+
+.cardLastContent {
+    display: flex;
+    color: black;
+    text-align: left;
+}
+
+.presentation{
+    border-right: 1px solid var(--myLightBlueColor);
+    width: 55%;
+    color: black;
+    padding: 10px;
+}
+
+.caracteristiques {
+    padding: 10px;
+}
+
+
+.caracteristiques p b {
+    margin-right: auto;
+}
+
+.presentation i {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+
+.presentation a:hover {
+    opacity: 0.5;
+    font-size: medium;
+}
+
+.containerSemaines{
+    padding: 100px 200px;
+    display: grid;
+    grid-template: repeat(6,1fr) / repeat(6, 1fr);
+    gap: 50px;
+}
+
+.containerSemaines .item {
+    border-radius: var(--myBorderRadius);
+    overflow: hidden;
+    opacity: 0.8;
+    color: white;
+}
+
+#item1{
+    grid-area: 1/1/3/3;
+    background: linear-gradient(90deg, var(--bleu1),var(--bleu3));
+}
+
+#item2{
+    grid-area: 3/1/6/3;
+    background: linear-gradient(90deg, var(--bleu1),var(--bleu3));
+}
+
+#item3{
+    grid-area: 6/1/7/6;
+    background: linear-gradient(90deg, var(--bleu1),var(--bleu6));
+}
+
+#item4{
+    grid-area: 1/3/6/6;
+    background: linear-gradient(90deg, var(--bleu3),var(--bleu6));
+}
+
+#item5{
+    grid-area: 1/6/7/7;
+    background: linear-gradient(90deg, var(--bleu6),var(--bleu8));
+}

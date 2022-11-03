@@ -1,0 +1,30 @@
+:root {
+    --ffm: 'Montserrat', sans-serif;
+    --fff: 'Fuzzy Bubbles', cursive;
+}
+
+body {
+    font-family: var(--fff);
+    font-size: large;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.titreHeader,.monFooter,.maNavbar {
+    background-color: aqua;
+    height: 5vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.maNavbar {
+    background-color: lightgreen;
+}
+
+.container {
+    height: 85vh;
+}

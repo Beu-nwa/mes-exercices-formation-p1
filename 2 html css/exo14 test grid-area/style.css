@@ -1,0 +1,25 @@
+:root {
+    --ffm: 'Montserrat', sans-serif;
+    --fff: 'Fuzzy Bubbles', cursive;
+}
+
+body {
+    font-family: var(--fff);
+    font-size: large;
+    padding: 100px;
+}
+
+.boxeA {
+    grid-area: "areaA";
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "areaA";
+    gap: 10px;
+}
+
+*[class^="boxe"]{
+    border: solid black 1px;
+    text-align: center;
+}

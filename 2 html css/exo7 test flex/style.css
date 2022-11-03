@@ -1,0 +1,64 @@
+:root {
+    --ffm: 'Montserrat', sans-serif;
+    --fff: 'Fuzzy Bubbles', cursive;
+}
+
+body {
+    font-family: var(--fff);
+    font-size: large;
+    padding: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    border: 1px solid blueviolet;
+    padding: 10px;
+    display: flex;
+    /* flex-direction: row; ou columns */
+    /* flex-wrap: wrap-reverse; ou wrap, nowrap,*/
+    flex-flow: row wrap;
+    /* flex-flow prend plusieurs valeurs */
+    justify-content: space-evenly;
+    /* ou center; space-between; space-around; flex-end */
+    height: 200px;
+    align-items: center;
+    /*   flex-end; flex-start; center ;stretch = étire (parametre par defaut) */
+    /* align-content: space-between; */
+    /* flex-start; flex-end; stretch; center = valeur par defaut */
+    gap: 50px 10px;
+    /* gap l'ecart entre 2 items; gap: ligne column */
+}
+
+*[class^="contItem"]{
+    border: 1px solid blue;
+}
+
+.contItemA {
+    order: 5;
+}
+
+.contItemB {
+    order: 3;
+}
+
+.contItemC {
+    order: 1;
+}
+
+.contItemD {
+    order: 0;
+    align-self: flex-start;
+}
+
+.contItemE {
+    order: 2;
+    align-self: flex-end;
+}
+
+.contItemF {
+    order: 4;
+    align-self: start;
+}

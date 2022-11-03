@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Formulaires</h1>
+            <div class="monFormulaire">
+                <form action="">
+                    <fieldset>
+                        <legend>Qui êtes vous ?</legend>
+                        <!-- inputs de même type et de name donc une seule value -->
+                        <div class="space">
+                            <label>Mr<input type="radio" name="gender" value="Mr"></label>
+                            <label>Ms<input type="radio" name="gender" value="Ms"></label>
+                            <label>Other<input type="radio" name="gender" value="Other"></label>
+                            <!-- l'attribut "checked" pour que ca soit checké -->
+                        </div>
+                        <!-- inputs de type text, date, password -->
+                        <div class="space">
+                            <legend for="userName">Nom :</legend>
+                            <input type="text" placeholder="Nom" name="userName">
+                        </div>
+                        <div class="space">
+                            <label for="userFirstName">Prénom :</label>
+                            <input type="text" placeholder="Prénom" name="userFirstName">
+                        </div>
+                        <div class="space">
+                            <label for="userDateOfBirth">Date de naissance :</label>
+                            <input type="date" placeholder="Date de naissance" name="userDateOfBirth">
+                        </div>
+                        <div class="space">
+                            <label for="userPassword">Mot de passe : :</label>
+                            <input type="password" placeholder="Mot de passe" name="userPassword">
+                        </div>
+                        <!-- inputs de même type mais pas meme name donc ils peuvent etre coché en meme temps -->
+                        <div class="space">
+                            <label>Java<input type="checkbox" value="java" name="java"></label>
+                            <label>C#<input type="checkbox" value="csharp" name="csharp"></label>
+                            <label>JS<input type="checkbox" value="js" name="js"></label>
+                        </div>
+                        <!-- inputs transformé en switch grace au css -->
+                        <div class="space">
+                            <label>Pensez vous etre compétent ?</label>
+                            <label class="switchLabel">
+                                <input type="checkbox" class="switchInput">
+                                <span id="snon">NON</span>
+                                <span id="soui">OUI</span>
+                                <span id="round"></span>
+                            </label>
+                        </div>
+                        <!-- select pour faire un menu deroulant -->
+                        <div class="space">
+                            <label for="ville">Liste de ville</label>
+                            <select name="ville" id="selectVille">
+                                <option value="disabled">ville</option>
+                                <option value="lille">lille</option>
+                                <option value="paris">paris</option>
+                                <option value="lyon">lyon</option>
+                                <option value="anger">anger</option>
+                                <option value="tours">tours</option>
+                            </select>
+                        </div>
+                        <!-- select mais avec choix multiple dit groupes -->
+                        <div class="space">
+                            <label for="localisations">Choississez villes et pays</label>
+                            <select name="localisations" multiple>
+                                <optgroup label="ville">
+                                    <option name="disabled">ville</option>
+                                    <option name="lille">lille</option>
+                                    <option name="paris">paris</option>
+                                    <option name="lyon">lyon</option>
+                                    <option name="tours">tours</option>
+                                </optgroup>
+                                <optgroup label="pays">
+                                    <option name="france">france</option>
+                                    <option name="belgique">belgique</option>
+                                    <option name="angletter">angletter</option>
+                                    <option name="suisse">suisse</option>
+                                    <option name="iatlie">iatlie</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <!-- text area -->
+                        <div class="space">
+                            <label for="description">Parlez moi de moi</label>
+                            <textarea name="description" cols="30" rows="10" class="myTextArea"
+                                placeholder="Parlez moi de moi !!!!!!!"></textarea>
+                        </div>
+                        <!-- les chevrons -->
+                        <span>&lt;div&gt;bonjour;&lt;/div&gt</span>
+                        <!-- 2 facons de faire des boutons -->
+                        <div class="space btn">
+                            <input type="submit" value="valider">
+                            <button type="reset">annuler</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
