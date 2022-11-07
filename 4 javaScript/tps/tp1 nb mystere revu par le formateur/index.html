@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Test fonctions</title>
+    <script>
+        // ici declaration de fonction en mode vanilla
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">TP1 : Nombre Mystere</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="divNombreMystere">
+                <h1 class="text-dark">Le nombre Mystere</h1>
+                <div class="divTextAuCentre">
+                    <p id="text"></p>
+                </div>
+                <div class="divDuBas">
+                    <span id="textNbCoups"></span>
+                    <input type="number" id="tentativeInput">
+                    <button class="btn btn-dark" onclick="fctValidationTentative()">Valider</button>
+                </div>
+                <div class="divDuBtn p-2"><button class="btn btn-dark" onclick="fctRejouer()">REJOUER</button></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
