@@ -1,9 +1,9 @@
 import vehicules from "./vehicules.js";
 
 export default class voitures extends vehicules {
-    constructor(marque, modele, kilometrage, annee){
+    constructor(marque, modele, kilometrage, annee, clim){
         super(marque, modele, kilometrage, annee);
-        this.clim = false;
+        this.clim = clim;
     }
 
     Display(){
@@ -11,12 +11,10 @@ export default class voitures extends vehicules {
         // console.log(`Voiture : `);
         // super.Display();
         // console.log(`${this.clim}`);
-        let text;
-        if(this.clim) text = "climatisé.";
-        return `<b>Voiture</b> ${super.Display()} ${text} : `;
+        return `<b>Voiture</b> ${super.Display()} ${this.clim? ", climatisée." : ", non climatisée."} : `;
     }
 
-    Asclim(){
-        this.clim = true;
-    }
+    // Asclim(){
+    //     this.clim = true;
+    // }
 }
