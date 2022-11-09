@@ -3,6 +3,8 @@ export default class vehicules {
     constructor(immatriculation, date) {
         this.immatriculation = immatriculation;
         this.date = date;
+        this.payed = false;
+        this.endDate = "";
     }
 
     Display() {
@@ -12,6 +14,18 @@ export default class vehicules {
 
     getFirstDate(){
         return this.date;
+    }
+
+    changeEndDate(x){
+        this.endDate = x;
+    }
+
+    getDuration(){
+        return (this.endDate-this.date)/60000;
+    }
+
+    PayTicket(){
+        this.payed = true;
     }
 
 }
