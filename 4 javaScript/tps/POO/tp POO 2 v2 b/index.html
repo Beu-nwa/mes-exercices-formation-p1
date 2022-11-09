@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>TP POO Héritage</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">TP POO Héritage</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-4 m-auto">
+                    <table class="table table-dark table-striped text-center">
+                        <thead>
+                            <th>Durée</th>
+                            <th>Prix</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15 min maximum</td>
+                                <td>0.8€</td>
+                            </tr>
+                            <tr>
+                                <td>15 min - 30 min</td>
+                                <td>1.30€</td>
+                            </tr>
+                            <tr>
+                                <td>30 min - 45 min</td>
+                                <td>1.70€</td>
+                            </tr>
+                            <tr>
+                                <td>45 min - 1h</td>
+                                <td>2.10€</td>
+                            </tr>
+                            <tr>
+                                <td>1h - 2h</td>
+                                <td>4.10€</td>
+                            </tr>
+                            <tr>
+                                <td>2h - 4h</td>
+                                <td>8€</td>
+                            </tr>
+                            <tr>
+                                <td>4h - 12h</td>
+                                <td>20€</td>
+                            </tr>
+                            <tr>
+                                <td>12h - 24h</td>
+                                <td>35€</td>
+                            </tr>
+                            <tr>
+                                <td>Au delà de 24h</td>
+                                <td>60€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-6 m-auto">
+                    <div class="card">
+                        <div class="card-title text-center">
+                            <h2 class="m-2">Parking 3000</h2>
+                            <div id="alert">
+                                
+                            </div>
+                        </div>
+                        <div class="form-row m-2 d-flex">
+                            <input id="inputPlaques" pattern="^[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}$" type="text" class="col"
+                                placeholder="Saisir votre immatriculation au format AA-123-BB :">
+                            <button id="btnPayer" class="btn btn-success" type="button">Payer</button>
+                        </div>
+                        <div class="m-2">
+                            <button id="btnGetTicket" class="btn btn-primary w-100" type="button">Obtenir un
+                                ticket</button>
+                        </div>
+                        <div class="m-2">
+                            <button id="btnExit" class="btn btn-secondary w-100" type="button">Sortir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="result"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
