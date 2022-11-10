@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,6 +35,7 @@
                             <th>Date de naissance</th>
                             <th>Téléphone</th>
                             <th>Email</th>
+                            <th>Interaction</th>
                         </thead>
                         <tbody id="tableBodyContent">
 
@@ -47,6 +53,8 @@
                             <input class="radioInput" type="radio" name="gender" value="Mr">
                             <label class="radioLabel" for="Mme">Mme</label>
                             <input class="radioInput" type="radio" name="gender" value="Mme">
+                            <input id="defaultRadio" class="radioInput d-none" type="radio" name="gender" value="none"
+                                checked>
                         </div>
                         <input id="inputFirstName" class="col col-6" type="text" placeholder="nom">
                         <input id="inputLastName" class="col col-6" type="text" placeholder="prenom">
@@ -61,4 +69,5 @@
     </main>
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
