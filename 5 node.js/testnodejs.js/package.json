@@ -1,0 +1,12 @@
+{
+  "name": "testnodejs",
+  "version": "1.0.0",
+  "description": "premiers tests node",
+  "main": "test.js",
+  "scripts": {
+    "start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benoit Combe <benoit.combe59400@gmail.com>",
+  "license": "MIT"
+}
