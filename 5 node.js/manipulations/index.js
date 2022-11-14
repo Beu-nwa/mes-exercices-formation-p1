@@ -113,15 +113,20 @@ import fs from "fs";
  * 1/ recuperer le contenu d'un fichier data.json
  * 2/ reconstruire les objets js
  * 3/ ajouter un objet js
+ * 4/ update d'un fichier json
  */
 
 // 1/ recuperer le contenu d'un fichier data.json
-let fichier = fs.readFileSync('data.json');
-console.log(fichier);
+let jsonList = fs.readFileSync('data.json', (err, data) => {
+    if(err == null) return data
+    else console.log(err);
+});
+console.log(jsonList);
+console.log(jsonList.toString());
 
 // 2/ reconstruire les objets json en js
-let pers = JSON.parse(fichier);
-console.table(pers);
+let jsList = JSON.parse(jsonList);
+console.table(jsList);
 
 // 3/ ajouter un objet js
 let newPers = {
@@ -130,12 +135,13 @@ let newPers = {
     lastname: "Champagne"
 };
 
-pers.push(newPers);
-console.table(pers);
+jsList.push(newPers);
+console.table(jsList);
 
-let newJsonTable = JSON.stringify(pers);
-console.log(newJsonTable);
+// 4/ update d'un fichier json
+jsonList = JSON.stringify(jsList);
+console.log(jsonList);
 
-fs.writeFileSync('data.json', newJsonTable);
+fs.writeFileSync('data.json', jsonList);
 
 // NB en json, toutes les infos sont des strings sauf number et boolean
