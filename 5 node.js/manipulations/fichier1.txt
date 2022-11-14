@@ -1,0 +1,6 @@
+le fichier 1 contient du texte
+Contenu ajouté
+Contenu ajouté
+J'ajoute du nouveau contenu en async (par defaut)
+Contenu ajouté
+J'ajoute du nouveau contenu en async (par defaut)
