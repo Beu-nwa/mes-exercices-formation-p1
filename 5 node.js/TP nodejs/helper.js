@@ -22,6 +22,8 @@ export function success(message, data){
 }
 
 export function getUniqueId (list){
-    const maxId = list.map(x => x.id).reduce((a, b) => Math.max(a, b));
+    // const maxId = list.map(x => x.id).reduce((a, b) => Math.max(a, b));
+    const contactId = list.map(x => x.id);
+    const maxId = contactId.reduce((a, b) => Math.max(a, b));
     return (maxId + 1);
 };

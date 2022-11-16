@@ -74,6 +74,8 @@ app.post(`/create`, (req, res) => {
     // listeDeContact.push(new contact(JSON.parse(tmpContact)));
     // listeDeContact = JSON.parse(listeDeContact);
     // contactList est en JSON
+
+    
     contactList.push(new contact(tmpContact));
     // saveList();
     let message = `Le contact n°: ${nextId} a été ajouté.`;
