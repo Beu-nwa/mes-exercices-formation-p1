@@ -218,4 +218,12 @@ $ npm i ip --save
 
 # Exercice 6
 # Ajout du fonction afin de rendre permanent les changements dans la base de données en json
-
+const {readFileSync, writeFileSync} = require(`fs`);
+let coursList = JSON.parse(readFileSync(`./data/savedCoursList.json`,`utf-8`));
+function saveList(){
+    const objectToJson = JSON.stringify(coursList);
+    writeFileSync('./data/savedCoursList.json', objectToJson);
+    console.log("Données sauvegardées");
+}
+# appelle de saveList() au besoin donc dans .put .delete et .post
+saveList()

@@ -1,0 +1,8 @@
+{
+    "title": "Mr",
+    "firstname": "Lelaitier",
+    "lastname": "Maxou",
+    "dateOfBirth": "10/10/2022",
+    "Phone": "0743586149",
+    "Email": "maxou@hotmail.com"
+}
