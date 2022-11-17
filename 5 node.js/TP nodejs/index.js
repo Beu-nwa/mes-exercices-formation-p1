@@ -1,40 +1,22 @@
-import express from 'express';
-// import multer from 'multer';
 import cors from 'cors';
-// import path from 'path';
-import { M2iFunction, success, getUniqueId } from './helper.js';
-// import { fileURLToPath } from 'url';
+import express from 'express';
 import ip from 'ip';
+import bodyparser from "body-parser";
 import { readFileSync, writeFileSync } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+// import morgan from 'morgan';
+// import multer from 'multer';
+import { M2iFunction, success, getUniqueId } from './helper.js';
 import contact from "./classes/contact.js";
 
 const app = express();
 const port = 667;
 const ipAdress = ip.address();
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-// console.log(`Directory-Name : ${__dirname}`);
-
-let contactList = JSON.parse(readFileSync(`./data/contactList.json`, `utf-8`));
-console.table(contactList);
-
-
-let listeDeContact = [];
-fromJsonToJsClass()
-
-
-function fromJsonToJsClass() {
-    contactList.forEach(x => listeDeContact.push(new contact(x.id, x.title, x.firstname, x.lastname, x.dateOfBirth, x.Phone, x.Email)));
-}
-
-function save() {
-    const objectToJson = JSON.stringify(listeDeContact);
-    writeFileSync('./data/contactList.json', objectToJson);
-    console.log("Données sauvegardées");
-}
-
-
-
+// jsp ca sert à quoi
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+console.log(`Directory-Name \ud83d\udc49 ${__dirname}`);
 
 // CONFIG EXPRESS
 app
@@ -48,9 +30,38 @@ app
             res.send()
         })
     })
+    .use(bodyparser.json())
 // .use(express.static(path.join(__dirname, 'public')))
 // .use('/static', express.static(path.join(__dirname, 'public')));
 
+
+
+
+
+
+// un tableau d'objet qui contiendra mes contacts
+let listeDeContact = new Array();
+
+// fct qui parcourt les objets de la BDD et les fait passer par un model pour les mettre dans un tableau d'objets
+// fromJsonToJsClass()
+// function fromJsonToJsClass() {
+//     contactList.forEach(x => listeDeContact.push(new contact(x.id, x.title, x.firstname, x.lastname, x.dateOfBirth, x.Phone, x.Email)));
+// }
+
+loadList()
+function loadList() {
+    // pour lire le fichier json qui contient la BDD (base de données)
+    let datas = JSON.parse(readFileSync(`./data/contactList.json`, `utf-8`));
+    console.log(datas);
+    if (datas) datas.forEach(x => { listeDeContact.push(new contact(x.id, x.title, x.firstname, x.lastname, x.dateOfBirth, x.Phone, x.Email)) });
+    console.log(listeDeContact);
+}
+
+function saveList() {
+    // const objectToJson = JSON.stringify(listeDeContact);
+    // writeFileSync('./data/contactList.json', objectToJson);
+    // console.log("Données sauvegardées");
+}
 
 
 
@@ -62,10 +73,17 @@ app.get(`/`, (req, res) => {
     res.json({ message: `Liste de contact :`, data: listeDeContact })
 })
 
+app.get(`/contact/:id`, (req, res) => {
+    const id = parseInt(req.body.id);
+    let contact = listeDeContact.find(x => x.id == id);
+    if(contact != undefined) res.json(success(`Un contact a été trouvé`, contact))
+    else res.send(`Ce contact n'existe pas`);
+})
+
 app.post(`/create`, (req, res) => {
     // ajouter le body à notre contactList.json en passant par la class contact
     const nextId = getUniqueId(listeDeContact);
-    const tmpContact = { ...req.body, ...{ id: nextId} };
+    const tmpContact = { ...req.body, ...{ id: nextId } };
     console.log(tmpContact);
     // listeDeContact.push(tmpContact);
     // const tmpContact = new contact(nextId);
@@ -75,8 +93,9 @@ app.post(`/create`, (req, res) => {
     // listeDeContact = JSON.parse(listeDeContact);
     // contactList est en JSON
 
-    
+
     contactList.push(new contact(tmpContact));
+    console.log(contactList);
     // saveList();
     let message = `Le contact n°: ${nextId} a été ajouté.`;
     res.json(success(message, contactList));

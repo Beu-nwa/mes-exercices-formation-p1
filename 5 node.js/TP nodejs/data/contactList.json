@@ -4,7 +4,8 @@
         "title": "Mr",
         "firstname": "Lelaitier",
         "lastname": "Maxou",
-        "dateOfBirth": "10/10/2022",
+        "dateOfBirth": "24/03/2000",
+        "urlImg": "",
         "created": "2019-06-16T16:54:46.308Z",
         "Phone": "0743586149",
         "Email": "maxou@hotmail.com"
@@ -15,6 +16,7 @@
         "firstname": "Uzumaki",
         "lastname": "Naruto",
         "dateOfBirth": "24/03/2000",
+        "urlImg": "",
         "created": "2001-06-16T16:54:46.308Z",
         "Phone": "0743586123",
         "Email": "naruto@gmail.com"
