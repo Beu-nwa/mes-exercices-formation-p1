@@ -1,0 +1,85 @@
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+const L = parseInt(readline());
+const H = parseInt(readline());
+const T = readline().toUpperCase();
+let result0 = "";
+let result1 = "";
+let result2 = "";
+let result3 = "";
+let result4 = "";
+for (let i = 0; i < H; i++) {
+
+    for (let y = 0; y < T.length; y++) {
+        let N = T[y];
+
+        if (i == 0) {
+            if (N == "E" || N == "T" || N == "N") result0 += "### ";
+            if (N == "A") result0 += " #  ";
+            if (N == "H" || N == "M") result0 += "# # ";
+            if (N < "A" || N > "Z") result0 += "### ";
+        }
+
+        if (i == 1) {
+            if (N == "M") result1 += "### ";
+            if (N == "E") result1 += "#   ";
+            if (N == "T") result1 += " #  ";
+            if (N == "A" || N == "N" || N == "H") result1 += "# # ";
+            if (N < "A" || N > "Z") result1 += "  # ";
+        }
+
+        if (i == 2) {
+            if (N == "M" || N == "A" || N == "H") result2 += "### ";
+            if (N == "T") result2 += " #  ";
+            if (N == "N") result2 += "# # ";
+            if (N == "E") result2 += "##  ";
+            if (N < "A" || N > "Z") result2 += " ## ";
+        }
+
+        if (i == 3) {
+            if (N == "T") result3 += " #  ";
+            if (N == "E") result3 += "#   ";
+            if (N == "M" || N == "A" || N == "N" || N == "H") result3 += "# # ";
+            if (N < "A" || N > "Z") result3 += "    ";
+        }
+
+        if (i == 4) {
+            if (N == "T") result4 += " #  ";
+            if (N == "E") result4 += "### ";
+            if (N == "M" || N == "A" || N == "N" || N == "H") result4 += "# # ";
+            if (N < "A" || N > "Z") result4 += " #  ";
+        }
+
+        // if ((N == "M") || (N == "A")) result = " ## ";
+
+    }
+    const ROW = readline();
+
+}
+
+// function convert(chaine){
+//     chaine.forEach(x => {
+//         if(x == "#") x = "-----";
+//     })
+//     return chaine
+// }
+
+// console.log(convert(result0));
+// console.log(convert(result1));
+// console.log(convert(result2));
+// console.log(convert(result3));
+// console.log(convert(result4));
+
+console.log(result0);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+console.log(result4);
+
+// Write an answer using console.log()
+// To debug: console.error('Debug messages...');
+
+// console.log('answer');
