@@ -1,0 +1,37 @@
+.componentClass1 {
+    background: rgb(255, 170, 117);
+    height: 20vh;
+}
+
+.componentClass2,
+.componentClass4 {
+    background: rgb(37, 170, 218);
+}
+
+.componentClass2,
+.componentClass3,
+.componentClass4 {
+    color: white;
+    height: 70vh;
+}
+
+.componentClass3 {
+    background: rgb(12, 23, 177);
+}
+
+.componentClass5 {
+    background: rgb(244, 244, 0);
+    height: 10vh;
+}
+
+.componentClass1,
+.componentClass5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    display: inline-block;
+    margin: 100px;
+}
