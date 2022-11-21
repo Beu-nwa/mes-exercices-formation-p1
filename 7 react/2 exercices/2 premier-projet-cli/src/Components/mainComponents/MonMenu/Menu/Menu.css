@@ -1,0 +1,251 @@
+
+.container {
+    display: flex;
+    flex-direction: row wrap;
+    gap: 2%;
+    margin: 50px;
+}
+
+.container h2 {
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* col de gauche */
+
+.leftCol {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1%;
+}
+
+.cardOfMyself {
+    height: 400px;
+    width: 300px;
+    border: white solid;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url(./gigachad.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* box-shadow: 0px 2px 5px rgba(35,35,35,0.3);
+    transition: box-shadow .3s ease-in-out; */
+}
+
+.cardOfMyself div {
+    opacity: 0;
+    transition: 1s;
+    position: relative;
+    top: 100px;
+}
+
+.cardOfMyself:hover div {
+    opacity: 0.8;
+    transform: translateY(-100px);
+}
+
+.cardOfMyself ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardOfMyself .subtitle,
+.title {
+    text-align: center;
+}
+
+.cardContent {
+    background: #003E7D;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.socialMedia a,
+.aboutMe a {
+    color: white;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.socialMedia a:hover,
+.aboutMe a:hover {
+    color: unset;
+    opacity: 0.8;
+}
+
+
+
+
+
+/* col du milieu */
+
+.centerCol {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    gap: 40px;
+    /* text-align: center; */
+}
+
+.centerCol div {
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.centerCol hr {
+    margin: 1%;
+}
+
+#myCvDiv {
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/* Button pour telecharger cv : From uiverse.io by @Voxybuns */
+button {
+    --button_radius: 0.75em;
+    border: none;
+    border-radius: var(--button_radius);
+    background: none;
+}
+
+.buttonTop {
+    display: block;
+    box-sizing: border-box;
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: white;
+    color: none;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+button:hover .buttonTop {
+    transform: translateY(-0.33em);
+}
+
+button:active .buttonTop {
+    transform: translateY(0);
+}
+
+
+
+
+
+/* col de droite  */
+
+.rightCol {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border: solid white 2px;
+    border-radius: 15px;
+}
+
+.topRow {
+    align-self: center;
+    flex-flow: flex-start;
+}
+
+.rightCol h4 {
+    font-size: large;
+}
+
+.rightCol h3,
+h4 {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+}
+
+.botRow,
+.midRow {
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(2, 1fr);
+    border: solid 1px grey;
+}
+
+.botRowTitle,
+.midRowTitle,
+.midRowFirstTitle,
+.midRowSecondTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 1px grey;
+}
+
+.botRowTitle,
+.midRowTitle {
+    grid-area: 1/1/3/2;
+}
+
+.midRowSecondTitle {
+    border-top: solid 1px grey;
+}
+
+.midRowFirstTitle {
+    grid-area: 1/2/2/3;
+}
+
+.midRowSecondTitle {
+    grid-area: 2/2/3/3;
+}
+
+.firstRow,
+.secondRow {
+    padding: 1%;
+}
+
+.firstRow {
+    grid-area: 1/3/2/11;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.firstRow div {
+    text-align: center;
+}
+
+#masteries {
+    cursor: default;
+    font-size: large;
+}
+
+.firstRow h5 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.secondRow {
+    grid-area: 2/3/3/11;
+    border-top: solid 1px grey;
+}
+
+.firstRow img {
+    height: 80px;
+    width: 80px;
+}
