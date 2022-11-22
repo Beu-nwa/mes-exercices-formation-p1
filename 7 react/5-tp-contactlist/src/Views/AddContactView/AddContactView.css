@@ -1,0 +1,14 @@
+form {
+    width: 30%;
+    margin: 50px auto;
+}
+
+.btndiv {
+    padding: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btndiv button {
+    width: 30%;
+}

@@ -1,0 +1,16 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    color: white;
+    border-bottom: 2px solid red;
+}
+
+.banner img{
+    height: 150px;
+}
+
+.description{
+    transform: translateX(40%);
+}
