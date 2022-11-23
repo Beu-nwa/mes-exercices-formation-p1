@@ -13,11 +13,15 @@ const ContactListView = ({ contactList, setContactList }) => {
     // }
     // console.log(contact)
 
+    function deletePerson(id){
+        if(window.confirm(`etes vous sur de vouloir sup la personne à l'id: ${id}`)) alert('deleted')
+    }
+
     return (
         <div className='contactList'>
             <h2>ContactListView Works...</h2>
             <div className="contactContainer">
-                <FormationContact contactList={contactList} setContactList={setContactList} />
+                <FormationContact contactList={contactList} setContactList={setContactList} deletePerson={deletePerson} />
             </div>
         </div>
     );

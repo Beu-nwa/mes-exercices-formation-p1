@@ -2,7 +2,7 @@ import React from 'react';
 import './FormationContact.css';
 import { Trash3 } from 'react-bootstrap-icons';
 
-const FormationContact = ({ contactList, setContactList }) => {
+const FormationContact = ({ contactList, setContactList, deletePerson}) => {
     // console.log(contact);
     return (
 
@@ -26,7 +26,7 @@ const FormationContact = ({ contactList, setContactList }) => {
                         <td>{x.lastName}</td>
                         <td>{x.mail}</td>
                         <td>{x.numero}</td>
-                        <td><button className='btn btn-outline-danger'><Trash3/></button></td>
+                        <td><button className='btn btn-outline-danger' onClick={deletePerson(index)}><Trash3/></button></td>
                     </tr>
                 )}
 
