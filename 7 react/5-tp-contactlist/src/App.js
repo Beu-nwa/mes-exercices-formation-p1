@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { TRASH3 } from 'react-bootstrap-icons';
 import './App.css';
@@ -20,16 +20,15 @@ import { ContactList } from './datas/ContactList';
 
 function App() {
 
-  // const savedCart = localStorage.getItem('cart');
-  // const [contact, addContact] = useState([]); 
 
-  // const [contact, addContact] = useState(savedCart ? JSON.parse(savedCart) : []);
+  const savedList = localStorage.getItem('List');
 
-  // useEffect(()=>{
-  //   localStorage.setItem('cart', JSON.stringify(cart))
-  // },[cart])
+  const [contactList, setContactList] = useState(savedList ? JSON.parse(savedList) : ContactList);
 
-  const [contactList, setContactList] = useState(ContactList);
+  useEffect(() => {
+    localStorage.setItem('List', JSON.stringify(contactList))
+  }, [contactList]);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -38,9 +37,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<HomeView />} />
-            {/* <Route path="/list" element={<ContactListView />} /> */}
             <Route path="/list" element={<ContactListView contactList={contactList} setContactList={setContactList} />} />
-            {/* <Route path="/add" element={<AddContactView />} /> */}
             <Route path="/add" element={<AddContactView contactList={contactList} setContactList={setContactList} />} />
           </Routes>
           <div className="container">

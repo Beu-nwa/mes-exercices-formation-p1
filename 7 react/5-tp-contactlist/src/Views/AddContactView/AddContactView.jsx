@@ -9,7 +9,7 @@ const AddContactView = ({ contactList, setContactList }) => {
     const [telephone, setTelephone] = useState('');
 
     function addNewContact(e) {
-        e.preventDefault();
+        // e.preventDefault();
         alert(`${nom} ${prenom} ${email} ${telephone} a été ajouté à la liste`)
         let contactTmp = {firstName: nom, lastName : prenom, mail : email, numero : telephone};
         const listTmp = [...contactList];
@@ -35,7 +35,7 @@ const AddContactView = ({ contactList, setContactList }) => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="email">Email : </label>
-                            <input type="text" name="email" id="email" className='form-control' onChange={(e) => setEmail(e.target.value)} />
+                            <input type="email" name="email" id="email" className='form-control' onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="telephone">Telephone : </label>

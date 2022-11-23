@@ -6,15 +6,15 @@ import './ContactListView.css';
 // const ContactListView = () => {
 const ContactListView = ({ contactList, setContactList }) => {
 
-    // let contactArray = contact;
 
-    // function setNewContact(nom, prenom, email, telephone) {
-    //     contactArray.push(id,nom, prenom, email, telephone)
-    // }
-    // console.log(contact)
 
-    function deletePerson(id){
-        if(window.confirm(`etes vous sur de vouloir sup la personne à l'id: ${id}`)) alert('deleted')
+    function deletePerson(tabIndex){
+        if(window.confirm(`Etes-vous sur de vouloir supprimer la personne n°${tabIndex+1}`)){
+            let newList = contactList.filter((person,index)=> index !==tabIndex);
+            console.log(newList)
+            setContactList(newList);
+            alert(`Le contact n0${tabIndex+1} a été supprimé!`);
+        }
     }
 
     return (
