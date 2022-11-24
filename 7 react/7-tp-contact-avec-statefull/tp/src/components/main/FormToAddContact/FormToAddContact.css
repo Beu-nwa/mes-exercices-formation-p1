@@ -1,5 +1,5 @@
 .container{
-    width: 30%;
+    width: 50%;
 }
 
 .btndiv{
@@ -9,10 +9,4 @@
 
 .btndiv button{
     width: 30%;
-}
-
-.row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ContactView.css';
-import DisplayContactList from '../../components/main/DisplayContactList/DisplayContactList';
-import FormToUpdateContact from '../../components/main/FormToUpdateContact/FormToUpdateContact';
+import DisplayTable from '../../components/main/DisplayTable/DisplayTable';
+// import FormToUpdateContact from '../../components/main/FormToUpdateContact/FormToUpdateContact';
 
 
 class ContactView extends Component {
@@ -16,20 +16,24 @@ class ContactView extends Component {
         }
     }
 
-    updateContact = (tabIndex) => {
-        console.log([...this.props.list]);
+    updateContact = (contact) => {
         [...this.props.list].map((x, index) => {
-            if (index == tabIndex) console.log(x);
+            if (index == contact[0]) {
+                x.nom = contact[1];
+                x.prenom = contact[2];
+                x.mail = contact[3];
+                x.numero = contact[4]
+            }
         })
     }
 
     render() {
         return (
             <div id="ContactView">
-                <div className="my-2">
+                {/* <div className="my-2">
                     <FormToUpdateContact />
-                </div>
-                <DisplayContactList list={this.props.list} deleteContact={this.deleteContact} updateContact={this.updateContact} />
+                </div> */}
+                <DisplayTable list={this.props.list} deleteContact={this.deleteContact} updateContact={this.updateContact} />
             </div>
         );
     }

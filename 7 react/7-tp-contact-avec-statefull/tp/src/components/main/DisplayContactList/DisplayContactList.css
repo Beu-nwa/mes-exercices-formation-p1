@@ -1,16 +1,8 @@
-#DisplayContactList{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* #DisplayContactList input{
+    padding: 0;
+    margin: 0;
 }
-
-.table{
-    width: 50%;
-}
-
-#btnDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
+#DisplayContactList td{
+    padding: 5px;
+    margin: 0;
+} */

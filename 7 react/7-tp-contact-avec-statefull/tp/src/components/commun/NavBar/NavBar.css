@@ -1,4 +1,4 @@
-#NavBar{
+#NavBar {
     background: rgba(14, 168, 246, 0.5);
     border-bottom: 2px solid rgb(14, 168, 246);
     display: flex;
@@ -8,7 +8,12 @@
     padding: 10px;
 }
 
-.btn a{
+.btn a {
     color: white;
     text-decoration: none;
+    margin: 20px;
+}
+
+#NavBar .btn {
+    padding: 0;
 }

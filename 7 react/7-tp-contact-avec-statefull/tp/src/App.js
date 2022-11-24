@@ -31,12 +31,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Header contact={contact} addContact={addContact}/> */}
         <BrowserRouter>
           <Header />
           <main>
             <Routes>
-              <Route path="/" />
+              <Route path="/" element={<HomeView/>} />
               <Route path="/list" element={<ContactView list={this.state.list} setContactList={this.setContactList} />} />
               <Route path="/add" element={<AddContactView list={this.state.list} setContactList={this.setContactList} />} />
             </Routes>
@@ -44,7 +43,6 @@ class App extends Component {
               <Outlet />
             </div>
           </main>
-          {/* <NavBarComponent cart={cart} updateCart={updateCart} /> */}
         </BrowserRouter>
         <Footer />
       </div>
