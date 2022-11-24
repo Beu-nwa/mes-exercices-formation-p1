@@ -1,0 +1,14 @@
+#NavBar{
+    background: rgba(14, 168, 246, 0.5);
+    border-bottom: 2px solid rgb(14, 168, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}

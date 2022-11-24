@@ -1,0 +1,16 @@
+#DisplayContactList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    width: 50%;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

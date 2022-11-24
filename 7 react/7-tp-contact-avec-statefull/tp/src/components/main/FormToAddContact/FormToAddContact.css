@@ -1,0 +1,18 @@
+.container{
+    width: 30%;
+}
+
+.btndiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btndiv button{
+    width: 30%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

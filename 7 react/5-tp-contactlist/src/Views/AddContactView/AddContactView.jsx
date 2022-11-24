@@ -11,9 +11,8 @@ const AddContactView = ({ contactList, setContactList }) => {
     function addNewContact(e) {
         // e.preventDefault();
         alert(`${nom} ${prenom} ${email} ${telephone} a été ajouté à la liste`)
-        let contactTmp = {firstName: nom, lastName : prenom, mail : email, numero : telephone};
         const listTmp = [...contactList];
-        listTmp.push(contactTmp);
+        listTmp.push({firstName: nom, lastName : prenom, mail : email, numero : telephone});
         setContactList(listTmp);
     }
 
