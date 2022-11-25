@@ -22,13 +22,13 @@ export default class DisplayContactList extends Component {
             nom: nom,
             prenom: prenom,
             email: mail,
-            numero: number,
+            numero: number
         })
     }
 
     editPerson = (e, id) => {
         e.preventDefault();
-        let editedPerson = [id, this.state.nom, this.state.prenom, this.state.email, this.state.numero]
+        let editedPerson = [id , this.state.nom, this.state.prenom, this.state.email, this.state.numero]
         this.props.updateContact(editedPerson)
         this.changeIsActive();
     }
@@ -62,15 +62,15 @@ export default class DisplayContactList extends Component {
     render() {
         return !this.state.isActive ? (
             <React.Fragment>
-                <tr id='DisplayContactList' >
-                    <td>{this.props.index + 1}</td>
+                <tr id='DisplayContactList'>
+                    <td>{this.props.index}</td>
                     <td>{this.props.person.nom}</td>
                     <td>{this.props.person.prenom}</td>
                     <td>{this.props.person.mail}</td>
                     <td>{this.props.person.numero}</td>
                     <td>
                         <div id='btnDiv'>
-                            <button className='btn btn-outline-light' onClick={() => this.changeIsActive(this.props.index, this.props.person.nom, this.props.person.prenom, this.props.person.mail, this.props.person.numero)}><PencilSquare /></button>
+                            <button className='btn btn-outline-light' onClick={() => this.changeIsActive(this.props.person.nom, this.props.person.prenom, this.props.person.mail, this.props.person.numero)}><PencilSquare /></button>
                             <button className='btn btn-outline-danger' onClick={() => this.props.deleteContact(this.props.index)}><Trash3 /></button>
                         </div>
                     </td>

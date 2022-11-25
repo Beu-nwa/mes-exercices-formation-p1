@@ -30,9 +30,6 @@ class ContactView extends Component {
     render() {
         return (
             <div id="ContactView">
-                {/* <div className="my-2">
-                    <FormToUpdateContact />
-                </div> */}
                 <DisplayTable list={this.props.list} deleteContact={this.deleteContact} updateContact={this.updateContact} />
             </div>
         );
