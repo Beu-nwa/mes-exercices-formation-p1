@@ -1,0 +1,9 @@
+.DisplayContacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactTable {
+    width: 80%;
+}
