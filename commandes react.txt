@@ -1,0 +1,17 @@
+
+
+$ npm i , apres avoir importé une app react pour installer tous les packages qui ne sont pas transportés par git par exemple (.gitignore)
+
+$ npx create-react-app 5-tp-contactlist, 5-tp-contactlist etant le nom de l'app react
+$ npm start , pour tester
+$ npm i react-router-dom , à partir du moment où je vais utilser des roots pour afficher les diférents onglets 
+$ npm i react-bootstrap bootstrap
+$ npm i react-bootstrap-icons
+$ npm i axios , axios permet de se connecter à une api qu'elle soit local ou sur internet
+$ npm i react-redux , pour avoir redux qui permet de définir des states globaux
+
+
+rcc : genere un composant de type classe , stateful selon le formateur
+rfc : genere un composant de type fonction, stateless selon le formateur
+rrc  : pour un composant redux type classe.
+rfrc : pour un composant redux type fonction
