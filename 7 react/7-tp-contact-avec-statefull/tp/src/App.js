@@ -31,8 +31,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
           <Header />
+        <BrowserRouter>
           <main>
             <Routes>
               <Route path="/" element={<HomeView/>} />
