@@ -1,33 +1,23 @@
 import Header from './globalComponents/Header/Header';
 import Footer from './globalComponents/Footer/Footer';
 import HomeView from './Views/HomeView/HomeView';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Outlet
-} from 'react-router-dom';
+import pokemonSky from './assets/img/pokemonSky.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <header>
-          <Header />
-        </header>
+    <div className="App" style={{ backgroundImage: `url(${pokemonSky})` }}>
+      <header>
+        <Header />
+      </header>
+      <main>
         <main>
-          <main>
-            <Routes>
-              <Route path="/" element={<HomeView />} />
-            </Routes>
-            <div className="container">
-              <Outlet />
-            </div>
-          </main>
+          <div className='container'>
+            <HomeView />
+          </div>
         </main>
-      </BrowserRouter>
+      </main>
       <footer>
         <Footer />
       </footer>

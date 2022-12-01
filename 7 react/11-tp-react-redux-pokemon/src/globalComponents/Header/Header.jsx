@@ -1,43 +1,33 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import logoPokemon from '../../assets/img/logoPokemon.png'
+import pokeball from '../../assets/img/pokeball.png'
 import './Header.css';
 
 export default class Header extends Component {
     render() {
         return (
-            <div id="NavBar">
-                <div className='leftSide'>
-                    <img src="" alt="" />
-                    <Link to="/">Home</Link>
+            <div id="NavBar" className='row'>
+                <div id='leftSide' className='col col-4'>
+                    <img id='logo' src={logoPokemon} alt="logo international Pokemon" />
+                    <a href="https://www.pokemon.com/fr/" rel="noreferrer" target="_blank">Home</a>
                 </div>
-                <div className='center'>
+                <div id='center' className='col col-4'>
                     <h1>Mon Pokedex</h1>
                 </div>
-                <div className='rightSide'>
-                    <div className='pokeballDiv'>
-
+                <div id='rightSide' className='col col-4'>
+                    <div id='pokeballCounterContainer'>
+                        <div id='box1'>
+                            <img id='PokeballImg' src={pokeball} alt="Pokeball" />
+                        </div>
+                        <div id='box2'>0</div>
+                        <div id='box3'>Pokeball</div>
                     </div>
-                    <div className='btnDiv'>
-                        <button>Clear</button>
-                        <button>Show</button>
+                    <div id='btnDiv'>
+                        <button className='btn btn-light border-info'>Clear</button>
+                        <button className='btn btn-light border-info'>Show</button>
                     </div>
                 </div>
             </div>
-
-
-
-
-            // <div id="NavBar">
-            //     <button className='btn btn-outline-dark'>
-            //         <Link to="/">Home</Link>
-            //     </button>
-            //     <button className='btn btn-outline-dark'>
-            //         {/* <Link to="/list">Liste de contact</Link> */}
-            //     </button>
-            //     <button className='btn btn-outline-dark'>
-            //         {/* <Link to="/add">Ajout contact</Link> */}
-            //     </button>
-            // </div>
         )
     }
 }
