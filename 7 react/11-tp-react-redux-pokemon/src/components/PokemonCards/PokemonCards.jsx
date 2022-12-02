@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import './PokemonCards.css';
 
 export default class PokemonCards extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
     render() {
         return (
-                <li>
+            // <div id='pokemonCards'>
+                <div className='card col col-6'>
                     {this.props.pokemon.name}
-                </li>
+                </div>
+            // </div>
         )
     }
 }

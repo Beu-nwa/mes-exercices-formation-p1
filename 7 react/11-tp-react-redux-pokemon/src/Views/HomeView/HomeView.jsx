@@ -1,8 +1,8 @@
 // remplacer par un composant redux rrc
-
 import React, { Component } from 'react';
 import { getPokemonApi } from '../../api/PokemonApiService';
 import PokemonCards from '../../components/PokemonCards/PokemonCards';
+import './HomeView.css';
 
 export default class HomeView extends Component {
     constructor(props) {
@@ -38,8 +38,7 @@ export default class HomeView extends Component {
 
     render() {
         return (
-            <div>
-                <ul>
+            <div id='cardsContainer' className='row'>
                     {this.state.pokemonList.map((pokemon, index) => {
                         return (
                             <PokemonCards
@@ -50,7 +49,6 @@ export default class HomeView extends Component {
                         )
                     }
                     )}
-                </ul>
             </div>
         )
     }

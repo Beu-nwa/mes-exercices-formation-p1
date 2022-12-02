@@ -9,7 +9,7 @@ export default class Header extends Component {
             <div id="NavBar" className='row'>
                 <div id='leftSide' className='col col-4'>
                     <img id='logo' src={logoPokemon} alt="logo international Pokemon" />
-                    <a href="https://www.pokemon.com/fr/" rel="noreferrer" target="_blank">Home</a>
+                    <a className=' text-info' href="https://www.pokemon.com/fr/" rel="noreferrer" target="_blank">Home</a>
                 </div>
                 <div id='center' className='col col-4'>
                     <h1>Mon Pokedex</h1>

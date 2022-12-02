@@ -1,0 +1,179 @@
+les cases :	camelCase
+		snake_case
+		PascalCase
+		kebab-case
+
+
+https://flukeout.github.io/
+
+
+captures d ecran    windows shift s
+
+config installation git
+
+installer windows terminal sur microsoft store
+installer notepad++
+1/ dans choosing the default editor used by git
+chosir notepad+
+2/ à la suite du precedent: mettre override the default.... main
+3/ installer
+4/ decaucher view release note
+
+ouvrir le windows terminal et faire "git --version" (redemarrage possible)
+git config --global user.name "Benoit Combe"
+git config --global user.email "benoit.combe59400@gmail.com"
+
+créer nouveau dossier
+dans le dossier, faire clic droit, ouvrir dans le terminal.
+git init
+onglet affichage : afficher les elements masqués ( on voit le dossier .git apparaitre)
+
+nb: code . pour ouvrir le dossier dans vscode depuis la console
+
+dans vscode : fichier, preference, parametre, ecrire terminal, rechercher terminal interated default profil windows, selectionner git bash.
+
+dans le terminal, entrer dans le dossier (avec cd par exemple), git status pour voir si des fichiers n'ont pas été ajouté.
+git add +nom du fichier(git add . : pour tout ajouter), pour ajouter un fichier.
+
+nb: utiliser la touche tab pour l'auto-completion
+
+git status pour verifier.
+
+Il faut maintenant commit les fichiers
+dans le terminal: git commit (ouvre l'editeur)
+
+a la premiere ligne de l'editeur, ecrire le commentaire du commit puis save et fermer.
+
+à chaque changement notable:
+	- git add.
+ 	- git commit -m "commentaire du commit"
+
+Le gitignore sert à ignorer un fichier et ne pas le commit.
+	creer un fichier .gitignore et y nommer les fichiers que tu veux ignorer.
+
+--oneline
+--n "nombre"
+--p "fichier"
+--author "utilisateur"
+
+git log
+q pour quitter
+!
+git log --online
+git log -n 2 ,pour afficher les 2 derniers commits.
+git log -p index.html ,pour retrouver la liste des commits concernant ce fichier
+git log --author Benoit
+
+
+les commandes git diff pour consulter les modifications
+
+git branch "nom de la branche" ,pour creer une nouvelle branche
+
+#supprimer une branche: git branch -d "nom de la branche"
+
+git checkout "nom de la branche" pour acceder a la branche
+git checkout -b "nom" pour la creer et s'y rendre
+
+git merge "nomdelabranche" ,pour fusionner la branche nommée sur kla branche sur laquelle on se trouve
+
+github gitlab bitbucket
+
+git push/pull pour envoyer ou recuperer un projet sur un depot distant
+
+-----------------------------------------------------------------------------------------------------------------------------------
+hub docker install
+
+attention : ne pas installer sur un pc perso car risque de perte des données disque dur, ou alors le faire sur un pc sans donnée dessus
+
+apres l'installation depuis hub docker
+redemarage 
+message d'erreur car WSL2 n'est pas installer,
+ne pas restart mais suivre le lien pour l'installer
+
+de là suivre les etapes sur le liens : 
+dans le terminal en tant qu'admin : 
+$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+$ wsl --set-default-version 2
+telecharger debian sur le store, lien dans etape 6
+ouvrir debian et definir name
+
+retour sur le pop up d'erreur et restart, relancer docker
+nouveau message d'alert ---> quite puis restart pc
+
+ouvrir docker
+terminal admin :
+$ docker --version  , pour verifier si ok
+$ docker help , pour voir les commandes et ce qu'elles font
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
