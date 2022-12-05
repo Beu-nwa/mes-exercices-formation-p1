@@ -1,0 +1,24 @@
+# image source
+FROM debian:latest
+
+# information sur l'image
+LABEL version="1.0.0" maintainer="Benoit Combe <benoit.combe59400@gmail.com>"
+
+# commandes effectuées au démarrage de la création de l'image du container
+RUN apt update && apt upgrade -y && apt install nodejs -y && apt install npm -y && apt install nano -y
+
+# se positionner a l'interieur du dossier /Home/web
+WORKDIR /home/web
+
+# copier le contenu du dossier où se trouve le dockerfile à l'intérieur de la cible
+COPY . .
+
+# exposer le port 80 du conteneur
+EXPOSE 3000
+
+# installation des dependances
+RUN npm install
+
+# indiquer la commande de demarrage du container créé à partir de l'image
+CMD ["npm","start"]
+

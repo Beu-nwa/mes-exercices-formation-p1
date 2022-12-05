@@ -1,0 +1,2 @@
+# ignorer le docker file
+.dockerfile
