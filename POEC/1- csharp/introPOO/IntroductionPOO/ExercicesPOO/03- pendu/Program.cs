@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        IHM ihm = new IHM();
+        IHM ihm = new ();
         ihm.Demarrer();
     }
 }
