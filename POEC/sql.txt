@@ -1,0 +1,27 @@
+need windows pro ???????
+
+SQL windows powershell
+
+sqllocaldb
+
+sqllocaldb c IDP88 : create
+
+sqllocaldb s IDP88 : start
+
+sqllocaldb i IDP88 : infos
+
+sqllocaldb i : retourne l'ensemble des instances.
+
+---------------------------------------------
+dans visual studio : 
+
+affichage -> explorateur de serveurs
+cliquer sur le symbole de prise (connection à la base de données)
+Microsoft SQL Server (SqlClient)
+nom : (LocalDB)\IDP88
+test de connection
+si réussi : ok
+
+rennomer le fichier en haut à gauche dans connection de données en : IDP88.dbo
+
+relancer visual studio et verifier s'il est toujours là

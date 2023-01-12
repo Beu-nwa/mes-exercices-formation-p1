@@ -1,0 +1,1 @@
+﻿select * from livre where auteur = 'agatha christie'

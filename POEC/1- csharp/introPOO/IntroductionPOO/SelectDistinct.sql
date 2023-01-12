@@ -1,0 +1,5 @@
+﻿-- requete pour afficher toutes les tables
+SELECT PRO.* FROM PRODUCT PRO
+
+SELECT DISTINCT PRODUCT_TYPE_CD
+FROM PRODUCT
