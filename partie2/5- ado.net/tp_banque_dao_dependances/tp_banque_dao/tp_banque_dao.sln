@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp_banque_dao", "tp_banque_dao\tp_banque_dao.csproj", "{E919F045-C307-4BB9-8BC3-296E4AD44F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp_banque_ihm", "tp_banque_ihm\tp_banque_ihm.csproj", "{58258D63-A034-4921-A4BF-9379A7E64036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E919F045-C307-4BB9-8BC3-296E4AD44F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E919F045-C307-4BB9-8BC3-296E4AD44F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E919F045-C307-4BB9-8BC3-296E4AD44F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E919F045-C307-4BB9-8BC3-296E4AD44F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58258D63-A034-4921-A4BF-9379A7E64036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58258D63-A034-4921-A4BF-9379A7E64036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58258D63-A034-4921-A4BF-9379A7E64036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58258D63-A034-4921-A4BF-9379A7E64036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90190888-C223-4750-9E6E-0AF8689D0321}
+	EndGlobalSection
+EndGlobal
