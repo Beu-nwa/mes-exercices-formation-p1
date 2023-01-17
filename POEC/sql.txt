@@ -12,7 +12,7 @@ sqllocaldb i IDP88 : infos
 
 sqllocaldb i : retourne l'ensemble des instances.
 
----------------------------------------------
+------------------------------------------------------------------------------------------
 dans visual studio : 
 
 affichage -> explorateur de serveurs
@@ -25,3 +25,5 @@ si réussi : ok
 rennomer le fichier en haut à gauche dans connection de données en : IDP88.dbo
 
 relancer visual studio et verifier s'il est toujours là
+
+------------------------------------------------------------------------------------------
