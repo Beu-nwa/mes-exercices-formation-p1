@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace tp_banque_ihm.Tools
+namespace tp_banque_dao.Tools
 {
     internal class MyRegex
     {

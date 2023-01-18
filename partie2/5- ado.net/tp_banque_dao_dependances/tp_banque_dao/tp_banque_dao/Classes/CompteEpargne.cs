@@ -4,12 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_banque_ihm.Classes
+namespace tp_banque_dao.Classes
 {
-    internal class CompteEpargne : Compte
+    public class CompteEpargne : Compte
     {
         private decimal taux;
+        public CompteEpargne()
+        {
 
+        }
+
+        public CompteEpargne(decimal taux)
+        {
+            Taux = taux;
+        }
         public CompteEpargne(decimal solde, Client client, decimal taux) : base(solde, client)
         {
             Taux = taux;

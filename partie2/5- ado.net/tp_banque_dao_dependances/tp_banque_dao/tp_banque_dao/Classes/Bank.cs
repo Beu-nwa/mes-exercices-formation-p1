@@ -5,9 +5,9 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_banque_ihm.Classes
+namespace tp_banque_dao.Classes
 {
-    internal class Bank
+    public class Bank
     {
         private List<Compte> comptes;
 

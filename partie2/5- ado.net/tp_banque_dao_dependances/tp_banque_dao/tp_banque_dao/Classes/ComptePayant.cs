@@ -4,12 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_banque_ihm.Classes
+namespace tp_banque_dao.Classes
 {
-    internal class ComptePayant : Compte
+    public class ComptePayant : Compte
     {
         private decimal coutOperation;
 
+        public ComptePayant()
+        {
+
+        }
+        public ComptePayant(decimal cout)
+        {
+            CoutOperation = cout;
+        }
         public ComptePayant(decimal solde, Client client, decimal coutOperation) : base(solde, client)
         {
             CoutOperation = coutOperation;

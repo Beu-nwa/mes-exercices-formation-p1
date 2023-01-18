@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_banque_ihm.Classes
+namespace tp_banque_dao.Classes
 {
-    internal class Compte
+    public class Compte
     {
         private int id;
         private decimal solde;
@@ -16,15 +16,18 @@ namespace tp_banque_ihm.Classes
         public event Action<decimal, int> ADecouvert;
 
         public Compte()
-        { 
-
+        {
+            Operations = new List<Operation>();
         }
-        public Compte(decimal solde, Client client)
+        public Compte(decimal solde) : this()
+        {
+            Solde = solde;
+        }
+        public Compte(decimal solde, Client client) : this()
         {
             Id = ++counter;
             Solde = solde;
             Client = client;
-            Operations = new List<Operation>();
         }
 
         public int Id { get => id; set => id = value; }

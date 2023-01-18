@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using tp_banque_ihm.Tools;
+using tp_banque_dao.Tools;
 
-namespace tp_banque_ihm.Classes
+namespace tp_banque_dao.Classes
 {
-    internal class Client
+    public class Client
     {
         private int id;
         private string nom;
