@@ -1,0 +1,85 @@
+﻿<Window x:Class="tp_nb_mystere.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tp_nb_mystere"
+        mc:Ignorable="d"
+        Background="Aqua"
+        Title="MainWindow" Height="250" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock 
+            Grid.Row="0"
+            Text="Le nombre mystère" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            FontSize="24" 
+            FontWeight="Bold"
+            Foreground="White" />
+        
+        <TextBlock 
+            Grid.Row="1"
+            Text="J'ai généré un nombre entre 1 et 50 inclus" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            FontSize="20"
+            Foreground="White" />
+        
+        <TextBlock 
+            Grid.Row="2"
+            x:Name="Chaine_ligne_3" Text="Veuillez saisir un nombre"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            FontSize="18"
+            TextWrapping="Wrap"
+            Foreground="Black" />
+        
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock
+               Grid.Column="0"
+               x:Name="counter_text" Text="Premiere tentative :" 
+               HorizontalAlignment="Right"
+               Margin="10"
+               VerticalAlignment="Center" 
+               FontSize="15" Foreground="White" />
+            
+            <TextBox
+             Grid.Column="1" 
+             x:Name="input_attempt"
+             Width="150"
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center" />
+            
+            <Button
+            Grid.Column="2"
+            Content="Valider"
+            x:Name="valider_btn"
+            Click="Confirm_attempt_Click"
+             Width="100"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" />
+            
+        </Grid>
+        
+            <Button Grid.Row="4" Content="Nouvelle partie"
+            Click="New_Game_Click"
+             Width="300"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" />
+            
+    </Grid>
+</Window>

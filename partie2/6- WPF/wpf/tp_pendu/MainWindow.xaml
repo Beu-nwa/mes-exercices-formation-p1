@@ -1,0 +1,123 @@
+﻿<Window x:Class="tp_pendu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tp_pendu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Aqua">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Le pendu"
+            FontSize="24"
+            FontWeight="Bold"
+            />
+
+        <Grid
+            Grid.Row="1" 
+            Grid.RowSpan="7" 
+            Grid.Column="0" 
+            Background="White"
+            Height="200"
+            Width="200">
+
+            <Image
+            x:Name="emplacement_image"
+            Stretch="Fill"/>
+            
+        </Grid>
+
+        <TextBlock 
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="Le mot à trouver : "/>
+        
+        <TextBlock 
+            x:Name="mot_a_trouver"
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="_"/>
+        
+        <TextBlock 
+            Grid.Row="4"
+            Grid.Column="1"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="Lettre.s déjà proposée.s"/>
+
+        <TextBlock 
+            x:Name="lettres_proposées"
+            Grid.Row="5"
+            Grid.Column="1"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="18"
+            Text="X-X-X-X-X-X"/>
+
+        <Grid Grid.Row="6" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBox
+             Grid.Column="0" 
+             x:Name="input_attempt"
+             Width="100"
+             Height="30"
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center" />
+
+            <Button
+            Grid.Column="1"
+            Content="Valider"
+            x:Name="valider_btn"
+            Click="Confirm_attempt_click"
+             Width="100"
+             Height="30"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" />
+        </Grid>
+
+        <Button 
+            Grid.Row="8" 
+            Grid.ColumnSpan="2"
+            Height="30"
+            Width="400"
+            x:Name="btn_rejouer"
+            Click="Rejouer_Click"
+            Content="Rejouer" 
+            FontSize="18"
+            FontWeight="Bold"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" />
+
+    </Grid>
+</Window>
