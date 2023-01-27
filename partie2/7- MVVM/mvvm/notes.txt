@@ -1,0 +1,2 @@
+package: mvvm light lips, déprécié mais aide toujours
+---> methode RaisePropertyChanged() incluse

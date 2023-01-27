@@ -1,0 +1,9 @@
+<ListView x:Name="ListeOperation" d:ItemsSource="{d:SampleData ItemCount=5}" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" Height="190" Margin="10">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="50" Header="Id" DisplayMemberBinding="{Binding Id}"/>
+                                            <GridViewColumn Width="500" Header="Date Opération" DisplayMemberBinding="{Binding DateOperation}"/>
+                                            <GridViewColumn Width="270" Header="Montant Opération" DisplayMemberBinding="{Binding Montant}"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
