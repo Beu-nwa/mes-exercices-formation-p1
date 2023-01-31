@@ -12,6 +12,8 @@ namespace tp01_CaisseEnregistreuse.Tools
     {
         private string connectionString = @"Data Source=(localdb)\bdd;Integrated Security=True";
         public DbSet<Product> Products { get; set; }
+        public DbSet<Categorie> Categories { get; set; }
+        public DbSet<Sale> Sales { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(connectionString);

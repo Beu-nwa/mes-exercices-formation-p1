@@ -8,23 +8,22 @@
         Title="Cars" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <StackPanel Grid.Column="0">
-            <GroupBox Header="Formulaire" >
+            <GroupBox Header="Formulaire">
                 <StackPanel>
                     <StackPanel>
                         <Label Content="Nom : "></Label>
                         <TextBox Text="{Binding Name}"></TextBox>
                     </StackPanel>
                     <StackPanel>
-                        <Label Content="Description : "></Label>
+                        <Label Content="Description :"></Label>
                         <TextBox Text="{Binding Description}"></TextBox>
                     </StackPanel>
                     <StackPanel>
-                        <Button Content="Valider" Command="{Binding ValidCommand}"></Button>
+                        <Button Command="{Binding ValidCommand}" Content="Valider"></Button>
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Text="{Binding Message}"></TextBlock>
@@ -33,21 +32,24 @@
             </GroupBox>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <GroupBox Header="Liste de voitures">
-                <ListView SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding Cars}">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="50"></GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Nom" Width="150"></GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Description}" Header="Description" Width="200"></GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+            <GroupBox Header="Liste voitures">
+                <StackPanel>
+                    <ListView SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding Cars}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                                <GridViewColumn Header="Nom" Width="150" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                                <GridViewColumn Header="Description" Width="200" DisplayMemberBinding="{Binding Description}"></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Supprimer" Command="{Binding DeleteCommand}"></Button>
+                        <Button Content="Modifier" Command="{Binding EditCommand}"></Button>
+                    </StackPanel>
+                </StackPanel>
             </GroupBox>
-            <StackPanel Orientation="Horizontal">
-                <Button Margin="10" Width="190" Content="Supprimer" Command="{Binding DeleteCommand}"></Button>
-                <Button Margin="10" Width="190" Content="Modifier" Command="{Binding EditCommand}"></Button>
-            </StackPanel>
         </StackPanel>
     </Grid>
+
 </Window>

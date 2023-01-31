@@ -16,7 +16,7 @@ namespace ProjetEntity.ViewModels
     public class CarsViewModels : ObservableObject
     {
         private Car car;
-        public Car SelectedCar { get; private set; }
+        public Car SelectedCar { get; set; }
         private DataDbContext dbContext;
         public ObservableCollection<Car> Cars { get; set; }
 
@@ -57,16 +57,13 @@ namespace ProjetEntity.ViewModels
             }
             else // voiture selectionnée => modification
             {
-                if(dbContext.SaveChanges() > 0)
+                if (dbContext.SaveChanges() > 0)
                 {
-                    if (dbContext.SaveChanges() > 0)
-                    {
-                        Message = "Voiture modifiée";
-                        SelectedCar = null;
-                        car = new Car();
-                        OnPropertyChanged(nameof(Name));
-                        OnPropertyChanged(nameof(Description));
-                    }
+                    Message = "Voiture modifiée";
+                    SelectedCar = null;
+                    car = new Car();
+                    OnPropertyChanged(nameof(Name));
+                    OnPropertyChanged(nameof(Description));
                 }
             }
             OnPropertyChanged(nameof(Message));

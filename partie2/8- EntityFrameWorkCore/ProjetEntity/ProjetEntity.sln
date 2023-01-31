@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetEntity", "ProjetEntity\ProjetEntity.csproj", "{BEE8E424-20F1-4A39-9F18-6B1DBEF8E6BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp01-CaisseEnregistreuse", "tp01-CaisseEnregistreuse\tp01-CaisseEnregistreuse.csproj", "{5F171833-D786-4250-99D6-477391756F91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tp01-CaisseEnregistreuse", "tp01-CaisseEnregistreuse\tp01-CaisseEnregistreuse.csproj", "{5F171833-D786-4250-99D6-477391756F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Great_Hangman", "The_Great_Hangman\The_Great_Hangman.csproj", "{08D20C0C-6D4D-42E7-9859-DC83B27B299B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5F171833-D786-4250-99D6-477391756F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F171833-D786-4250-99D6-477391756F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F171833-D786-4250-99D6-477391756F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D20C0C-6D4D-42E7-9859-DC83B27B299B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D20C0C-6D4D-42E7-9859-DC83B27B299B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D20C0C-6D4D-42E7-9859-DC83B27B299B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D20C0C-6D4D-42E7-9859-DC83B27B299B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
