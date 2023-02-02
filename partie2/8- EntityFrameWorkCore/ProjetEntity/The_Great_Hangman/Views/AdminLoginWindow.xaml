@@ -16,8 +16,8 @@
                     <TextBlock Text="Entrez le mot de passe Administrateur"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
-                    <TextBox Width="150"/>
-                    <Button Content="Valider" Width="50"/>
+                    <TextBox Text="{Binding AdminPassword}" Width="150"/>
+                    <Button Command="{Binding AdminPasswordCommand}" Content="Valider" Width="50"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

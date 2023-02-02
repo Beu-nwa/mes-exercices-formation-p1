@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using The_Great_Hangman.ViewModels;
 
 namespace The_Great_Hangman.Views
 {
@@ -22,6 +23,7 @@ namespace The_Great_Hangman.Views
         public AdminWindow()
         {
             InitializeComponent();
+            DataContext = new AdminViewModel();
         }
     }
 }

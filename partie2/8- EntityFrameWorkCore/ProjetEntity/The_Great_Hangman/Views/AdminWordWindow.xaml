@@ -5,23 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:The_Great_Hangman.Views"
         mc:Ignorable="d"
-        Title="AdminWordWindow" Height="600" Width="900">
+        Title="AdminWordWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="24" FontWeight="Bold" >Gestion Mots</TextBlock>
-        
-        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="24" FontWeight="Bold" >Gestion Mots</TextBlock>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
+            <TextBlock FontSize="20">Ajouter Mot : </TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <TextBox Width="180" Text="{Binding CreateWord}"></TextBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2">
+            <Button Command="{Binding CreateWordCommand}" Width="100">Ajouter</Button>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">
+            <TextBlock FontSize="20">Modifier Mot :</TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+            <TextBox Width="180" Text="{Binding UpdateWord}"></TextBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2">
+            <Button Command="{Binding UpdateWordCommand}" Width="100">Modifier</Button>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0">
+            <TextBlock FontSize="20">Supprimer Mot :</TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+            <TextBlock Width="180" Text="{Binding DeleteWord}"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2">
+            <Button Command="{Binding DeleteWordCommand}" Width="100">Supprimer</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="4">
+            <ListView ItemsSource="{Binding Words}" SelectedItem="{Binding SelectedWord}" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="80"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Mot}" Header="Mot" Width="190" />
+                        <!--<GridViewColumn DisplayMemberBinding="{Binding Counter}" Header="Compteur" Width="100" />-->
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
         
     </Grid>
 </Window>

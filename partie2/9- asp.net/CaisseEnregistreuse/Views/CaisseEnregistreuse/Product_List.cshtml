@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*<div>
+    <h3>Liste des contacts avec viewbag</h3>
+    <ul>
+        @foreach (ProductViewModel p in ViewBag.Products)
+        {
+            <li>@p.ProductId, @p.Name, @p.Price</li>
+        }
+    </ul>
+</div>*@
+
+<div>
+    <h3>Liste des contacts avec viewdata</h3>
+    <table class="table table-dark table-stripped">
+        <thead>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>prix</th>
+        <th>Category_id</th>
+        <th>Category_name</th>
+        </thead>
+        <tbody>
+            @foreach (ProductViewModel p in (ViewData["products"] as List<ProductViewModel>))
+            {
+                <tr>
+                    <td>@p.ProductId</td>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                    <td>@p.CategoryId</td>
+                    @foreach (Category c in (ViewData["categories"] as List<Category>))
+                    {
+                        if (c.CategoryId == p.CategoryId)
+                        {
+                            <td>
+                                @c.Name
+                            </td>
+                            break;
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

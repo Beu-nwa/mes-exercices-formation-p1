@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string message = "test variable string";
+    Layout = "_CustomLayout";
+    List<string> gens = new List<string>() { "Beu", "Maxou", "Sebinou", "Simou" };
+    bool test = false;
+}
+
+@*
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<div class="container">
+    <h1>@message</h1>
+</div>
+<ul>
+    @foreach (string g in gens)
+    {
+        <li>@g</li>
+    }
+</ul>
+
+@*@Html.ActionLink("le lien", "Index", "Home")*@
+<a asp-action="Index" asp-controller="Home">lien</a> @*depuis asp.net core 3*@
+
+@if(test){
+    <div>le booléen test est vrai</div>
+}
+else
+{
+    <div>le booléen test est faux</div>
+}
