@@ -7,6 +7,7 @@ namespace E_librairie.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
         public DateTime ReleaseDate { get; set; }
 
@@ -15,7 +16,6 @@ namespace E_librairie.Models
         public int? AuthorId { get; set; }
         [ForeignKey(nameof(AuthorId))]
         public Auteur? Author { get; set; }
-
 
 
         [Column("category_id")]
