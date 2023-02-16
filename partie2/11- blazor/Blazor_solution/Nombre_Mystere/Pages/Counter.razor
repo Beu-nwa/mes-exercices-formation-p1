@@ -1,0 +1,101 @@
+﻿@page "/counter"
+@*@using Nombre_Mystere.Pages;*@
+
+<PageTitle>Jeu du nombre Mystère</PageTitle>
+
+<div class="container bg-info text-light text-center">
+    <h1>Jouer au nombre mystere</h1>
+    <h3 class="my-2">Le nombre mystère est entre 1 et 50 inclus, essayez de le trouver en 5 coups maximum.</h3>
+    <div class="bg-primary my-2">
+        @switch (statue)
+        {
+            default:
+                {
+                    <p>Veuillez commencer une partie</p>
+                };
+                break;
+            case "InGame":
+                {
+                    <div class="row p-2">
+                        <div class="col col-3">
+                            <h3>Attempt : </h3>
+                        </div>
+                        <div class="col col-6">
+                            <input placeholder="Try a value" id="attempt" @bind="attempt" />
+                        </div>
+                        <div class="col col-3">
+                            <button class="btn btn-primary" @onclick="TryValue">Confirm</button>
+                        </div>
+                    </div>
+                    @if (currentCount != 5)
+                    {
+                        <div>
+                            <p>Le nombre mystère est <b>@helperString</b> que <b>@attempt</b>.</p>
+                        </div>
+                    }
+
+                    <div class="p-2">
+                        @for (int i = currentCount; i > 0; i--)
+                        {
+                            <i class="bi bi-heart-fill text-danger"></i>
+                        }
+                    </div>
+                }
+                break;
+            case "Won":
+                {
+                    <h3>Vous avez trouvé le nombre mystère @mstryNumber en @(6-currentCount) coups</h3>
+                }
+                break;
+            case "Loose":
+                {
+                    <h3>Vous n'avez pas trouvé le nombre mystère @mstryNumber .</h3>
+                }
+                break;
+
+        }
+    </div>
+<button class="btn btn-primary" @onclick="StartGame">Start a new game.</button>
+</div>
+
+
+@code {
+    private int currentCount = 5;
+    private int attempt;
+    private Random r = new Random();
+    private int mstryNumber = 0;
+    private string statue = "";
+    private string helperString = "";
+
+    private void TryValue()
+    {
+        if (attempt == mstryNumber)
+        {
+            //GameHistory.Add();
+            statue = "Won";
+        }
+        else
+        {
+            currentCount--;
+            if (currentCount == 0)
+            {
+                statue = "Loose";
+            }
+            else if (attempt > mstryNumber)
+            {
+                helperString = "plus petit";
+            }
+            else if (attempt < mstryNumber)
+            {
+                helperString = "plus grand";
+            }
+        }
+
+    }
+    private void StartGame()
+    {
+        statue = "InGame";
+        currentCount = 5;
+        mstryNumber = r.Next(1, 51);
+    }
+}

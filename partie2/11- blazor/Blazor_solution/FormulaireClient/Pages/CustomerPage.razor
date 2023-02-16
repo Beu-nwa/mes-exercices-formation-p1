@@ -1,0 +1,130 @@
+﻿@page "/CustomerPage";
+@using FormulaireClient.Models;
+
+<div class="row">
+    <div class="col col-5">
+        <h2><b>Formulaire :</b></h2>
+        <EditForm Model="Client" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+
+            <div>
+                <ValidationSummary />
+            </div>
+            <div class="row">
+                <div class="col col-6"> @*Nom*@
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom:</label>
+                        <InputText class="form-control" id="name" @bind-Value="Client.Name" />
+                        <small>
+                            <ValidationMessage For="() => Client.Name" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-6"> @*Email*@
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <InputText class="form-control" id="email" @bind-Value="Client.Email" />
+                        <small>
+                            <ValidationMessage For="() => Client.Email" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-6"> @*Address*@
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Adresse:</label>
+                        <InputText class="form-control" id="address" @bind-Value="Client.Address" />
+                        <small>
+                            <ValidationMessage For="() => Client.Address" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-6"> @*PostalCode*@
+                    <div class="mb-3">
+                        <label for="postalCode" class="form-label">Code postal:</label>
+                        <InputNumber class="form-control" id="postalCode" @bind-Value="Client.PostalCode" />
+                        <small>
+                            <ValidationMessage For="() => Client.PostalCode" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-6"> @*Age*@
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age:</label>
+                        <InputNumber class="form-control" id="age" @bind-Value="Client.Age" />
+                        <small>
+                            <ValidationMessage For="() => Client.Age" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-6"> @*BirthDate*@
+                    <div class="mb-3">
+                        <label for="birthDate" class="form-label">Date de naissance:</label>
+                        <InputDate min="1900-01-01" class="form-control" id="birthDate" @bind-Value="Client.BirthDate" />
+                        <small>
+                            <ValidationMessage For="() => Client.BirthDate" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-12"> @*isMarried*@
+                    <div class="mb-3">
+                        <InputCheckbox type="checkbox" class="form-check-input" id="isMarried" @bind-Value="Client.IsMarried" />
+                        <label class="form-check-label" for="isMarried">Married?</label>
+                        <small>
+                            <ValidationMessage For="() => Client.IsMarried" />
+                        </small>
+                    </div>
+                </div>
+                <div class="col col-12"> @*favorite color*@
+                    <div class="mb-3">
+                        <label for="FavoriteColor" class="form-label">couleur favorite</label>
+                        <InputSelect id="FavoriteColor" class="form-select w-50" placeholder="Choisir votre couleur favorite" @bind-Value="Client.FavoriteColor">
+                            @foreach (Client.Colors color in Enum.GetValues(typeof(Client.Colors)))
+                            {
+                                <option value="@color">@color</option>
+                            }
+                        </InputSelect>
+                        <small>
+                            <ValidationMessage For="() => Client.FavoriteColor" />
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <button type="submit" class="btn btn-primary">Validation</button>
+            </div>
+
+        </EditForm>
+    </div>
+    <div class="col col-3"></div>
+
+    <div class="col col-4">
+        @if (CardVisibility)
+        {
+            <div class="card mb-3 border-primary" style="max-width: 18rem;">
+                <div class="card-header text-white bg-primary">Resultat</div>
+                <div class="card-body text-black bg-light p-0">
+                    <ul class="list-group list-group-flush m-0">
+                        <li class="list-group-item">Nom : @Client.Name</li>
+                        <li class="list-group-item">Age : @Client.Age</li>
+                        <li class="list-group-item">Email : @Client.Email</li>
+                        <li class="list-group-item">Adresse : @Client.Address</li>
+                        <li class="list-group-item">Date de naissance : @Client.BirthDate</li>
+                        <li class="list-group-item">Couleur : @Client.FavoriteColor</li>
+                        <li class="list-group-item">@(Client.IsMarried ? "Marié(e)" : "Célibataire")</li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    private Client Client { get; set; } = new();
+    private bool CardVisibility { get; set; } = false;
+
+    private void HandleSubmit()
+    {
+        CardVisibility = true;
+    }
+}

@@ -12,7 +12,7 @@ namespace ContactsApi.Datas
         //    optionsBuilder.UseSqlServer(_connectionString);
         //}
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public DataDbContext(DbContextOptions<DataDbContext> options) : base(options)
         {
 
         }
